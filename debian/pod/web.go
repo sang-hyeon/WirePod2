@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/sang-hyeon/Wire-Pod2/chipper/pkg/logger"
-	"github.com/sang-hyeon/Wire-Pod2/chipper/pkg/vars"
-	botsetup "github.com/sang-hyeon/Wire-Pod2/chipper/pkg/wirepod/setup"
+	"github.com/kercre123/wire-pod/chipper/pkg/logger"
+	"github.com/kercre123/wire-pod/chipper/pkg/vars"
+	botsetup "github.com/kercre123/wire-pod/chipper/pkg/wirepod/setup"
 )
 
 // cant be part of config-ws, otherwise import cycle

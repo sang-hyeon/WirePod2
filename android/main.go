@@ -18,11 +18,11 @@ import (
 	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
-	"github.com/sang-hyeon/Wire-Pod2/chipper/pkg/initwirepod"
-	"github.com/sang-hyeon/Wire-Pod2/chipper/pkg/logger"
-	"github.com/sang-hyeon/Wire-Pod2/chipper/pkg/mdnshandler"
-	"github.com/sang-hyeon/Wire-Pod2/chipper/pkg/vars"
-	wirepod_vosk "github.com/sang-hyeon/Wire-Pod2/chipper/pkg/wirepod/stt/vosk"
+	"github.com/kercre123/wire-pod/chipper/pkg/initwirepod"
+	"github.com/kercre123/wire-pod/chipper/pkg/logger"
+	"github.com/kercre123/wire-pod/chipper/pkg/mdnshandler"
+	"github.com/kercre123/wire-pod/chipper/pkg/vars"
+	wirepod_vosk "github.com/kercre123/wire-pod/chipper/pkg/wirepod/stt/vosk"
 	"github.com/wlynxg/anet"
 )
 

@@ -8,7 +8,7 @@ COMPILE_ARCHES=(amd64 armhf arm64)
 #COMPILE_ARCHES=(arm64)
 
 WP_COMMIT_HASH=$(cd ../wire-pod && git rev-parse --short HEAD)
-GOLDFLAGS="-X 'github.com/sang-hyeon/Wire-Pod2/chipper/pkg/vars.CommitSHA=${WP_COMMIT_HASH}'"
+GOLDFLAGS="-X 'github.com/kercre123/wire-pod/chipper/pkg/vars.CommitSHA=${WP_COMMIT_HASH}'"
 
 ORIGPATH="$(pwd)"
 
@@ -39,7 +39,7 @@ fi
 
 # gather compilers
 if [[ ! -d wire-pod-toolchain ]]; then
-    git clone https://github.com/sang-hyeon/Wire-Pod2-toolchain --depth=1
+    git clone https://github.com/kercre123/wire-pod-toolchain --depth=1
 fi
 
 # compile vosk...
@@ -57,7 +57,7 @@ function createDEBIAN() {
     echo "Version: ${PODVERSION#v}" >> control
     echo "Maintainer: Kerigan Creighton <kerigancreighton@gmail.com>" >> control
     echo "Description: A replacement voice server for the Anki Vector robot." >> control
-    echo "Homepage: https://github.com/sang-hyeon/Wire-Pod2" >> control
+    echo "Homepage: https://github.com/kercre123/wire-pod" >> control
     echo "Architecture: $ARCH" >> control
     echo "Depends: libopus0, libogg0, avahi-daemon, libatomic1, libsodium23" >> control
     cd $ORIGPATH
@@ -298,7 +298,7 @@ function buildWirePod() {
     
     # get the webroot, intent data, certs
     if [[ ! -d wire-pod ]]; then
-        git clone https://github.com/sang-hyeon/Wire-Pod2 --depth=1
+        git clone https://github.com/kercre123/wire-pod --depth=1
     fi
     DC=debcreate/${ARCH}
     WPC=wire-pod/chipper
